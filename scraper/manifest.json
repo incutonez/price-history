@@ -1,0 +1,19 @@
+{
+  "description": "Scraping receipts from websites for your user",
+  "manifest_version": 2,
+  "name": "incutonez-receipt-scraper",
+  "version": "1.0",
+  "permissions": [
+    "webRequest",
+    "<all_urls>",
+    "webRequestBlocking",
+    "webRequestFilterResponse",
+    "clipboardWrite",
+    "contextMenus",
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
