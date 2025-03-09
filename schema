@@ -1,0 +1,37 @@
+purchases Table
+receiptId => receipts.id
+itemId => items.id
+items[].purchaseData.pricingInfo.unitPricePaid (things like veggies come in units) => unitPricePaid
+items[].purchaseData.pricingInfo.totalPricePaid => totalPricePaid
+items[].purchaseData.pricingInfo.totalSavings => totalSavings
+items[].purchaseData.pricingInfo.originalUnitPrice => unitPrice
+items[].purchaseData.pricingInfo.originalTotalPricePaid => totalPrice
+items[].purchaseData.quantityInfo.received => quantity
+
+items Table
+items[].purchaseData.upc => id
+items[].purchaseData.isWeighted => weighted (things like veggies, etc. get weighed)
+items[].purchaseData.displayInfo.description => description
+items[].purchaseData.displayInfo.imageUrl => imageUrl
+items[].purchaseData.displayInfo.customerFacingSize => size
+
+receipts Table
+id Guid
+receiptCreateDateTime.value => purchaseDate
+storeId => stores.id
+costSummary.total => total
+costSummary.totalTax => tax
+costSummary.subTotal => subTotal
+costSummary.savings => savings
+items[].length => items
+
+stores Table
+id Guid
+purchaseId.fulfillmentId.divisionNumber => divisionId
+purchaseId.fulfillmentId.storeNumber => storeId
+purchaseId.fulfillmentId.locationId => locationId
+storeInfo.address.name => name
+storeInfo.address.addressLines[] => address
+storeInfo.address.cityTown => city
+storeInfo.address.postalCode => zip
+storeInfo.address.stateProvince => state
