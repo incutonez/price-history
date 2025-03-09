@@ -1,1 +1,1 @@
-mongodump.exe --gzip --db=receipts --out=mongo
+npm run backup

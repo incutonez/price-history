@@ -1,0 +1,16 @@
+{
+  "name": "@incutonez/price-history",
+  "version": "0.0.1",
+  "description": "An app for tracking price history of products over time",
+  "main": "index.js",
+  "scripts": {
+    "backup": "mongodump --gzip --db=receipts --out=mongo",
+    "restore": "mongorestore --nsInclude='receipts.*' --gzip mongo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incutonez/price-history.git"
+  },
+  "author": "incutonez@hotmail.com",
+  "license": "ISC"
+}
