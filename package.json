@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "backup": "mongodump --gzip --db=receipts --out=mongo",
-    "restore": "mongorestore --nsInclude='receipts.*' --gzip mongo"
+    "restore": "mongorestore --dir=mongo --nsInclude=receipts.* --gzip"
   },
   "repository": {
     "type": "git",
